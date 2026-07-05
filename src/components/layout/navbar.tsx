@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { NAV_LINKS, SITE_NAME, BOOKING_URL } from "@/lib/constants"
+import { useScrollPosition } from "@/hooks/use-scroll-position"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const scrolled = useScrollPosition(24)
 
   useEffect(() => {
     if (mobileOpen) {
@@ -24,7 +26,7 @@ export function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 glass shadow-sm"
+        className={scrolled ? "fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-border" : "fixed top-0 left-0 right-0 z-50 glass shadow-sm"}
         role="navigation"
         aria-label="Navegación principal"
       >
