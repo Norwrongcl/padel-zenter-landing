@@ -9,22 +9,29 @@ import Image from "next/image"
 
 function PadelBall() {
   return (
-    <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="20" cy="20" r="18.5" stroke="white" strokeWidth="2.5" strokeOpacity="0.6" />
+    <svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30" fill="#C6E000" />
+      <circle cx="32" cy="32" r="30" fill="url(#tennisShadow)" opacity="0.18" />
       <path
-        d="M4 16 Q12 10 20 16 Q28 22 36 16"
+        d="M12 20C20 14 24 8 32 8C40 8 44 14 52 20"
         stroke="white"
-        strokeWidth="2.5"
-        strokeOpacity="0.6"
+        strokeWidth="5"
+        strokeLinecap="round"
         fill="none"
       />
       <path
-        d="M4 24 Q12 30 20 24 Q28 18 36 24"
+        d="M12 44C20 50 24 56 32 56C40 56 44 50 52 44"
         stroke="white"
-        strokeWidth="2.5"
-        strokeOpacity="0.6"
+        strokeWidth="5"
+        strokeLinecap="round"
         fill="none"
       />
+      <defs>
+        <linearGradient id="tennisShadow" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#000000" />
+        </linearGradient>
+      </defs>
     </svg>
   )
 }
