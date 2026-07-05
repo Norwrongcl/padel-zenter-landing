@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: `Contacto — ${SITE_NAME}`,
@@ -115,7 +116,24 @@ export default function ContactoPage() {
         <Section variant="default" className="!pt-0">
           <Container>
             <div className="max-w-4xl mx-auto">
-              <div className="w-full h-64 md:h-80 bg-gray-200 rounded-xl overflow-hidden">
+              <Card padding="none" className="overflow-hidden mb-6">
+                <div className="relative h-56 md:h-72">
+                  <Image
+                    src="/images/hero.jpg"
+                    alt="Vista del club de pádel Padel Zenter"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 1024px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-sm font-semibold">Visítanos en Viña del Mar</p>
+                    <p className="text-xs text-white/80">Club, canchas y atención directa</p>
+                  </div>
+                </div>
+              </Card>
+
+              <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden border border-border shadow-sm">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.997640861669!2d-71.52900512430078!3d-33.02450017355738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689dd0c3ed61c1b%3A0x9c7a3e557c0c97e5!2sG%C3%B3mez%20Carre%C3%B1o%2C%20Vi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1700000000000"
                   width="100%"
