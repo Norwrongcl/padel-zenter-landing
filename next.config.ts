@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  output: "export",
+  images: {
+    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [375, 640, 768, 1024, 1280, 1536, 1920],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
