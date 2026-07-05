@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/constants"
 
 export const dynamic = "force-static"
 
-const routes = ["", "/nosotros", "/canchas", "/servicios", "/torneos", "/galeria", "/contacto"]
+const routes = ["", "/nosotros", "/canchas", "/servicios", "/torneos", "/contacto"]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({

@@ -21,10 +21,9 @@ export const BUSINESS_HOURS = {
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Inicio", href: "/" },
-  { label: "Nosotros", href: "/nosotros" },
   { label: "Canchas", href: "/canchas" },
   { label: "Servicios", href: "/servicios" },
-  { label: "Galería", href: "/galeria" },
+  { label: "Nosotros", href: "/nosotros" },
   { label: "Torneos", href: "/torneos" },
   { label: "Contacto", href: "/contacto" },
 ]

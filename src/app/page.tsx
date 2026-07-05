@@ -1,8 +1,7 @@
 import { Hero } from "@/components/sections/hero"
-import { About } from "@/components/sections/about"
 import { Facilities } from "@/components/sections/facilities"
 import { Services } from "@/components/sections/services"
-import { Gallery } from "@/components/sections/gallery"
+import { About } from "@/components/sections/about"
 import { Tournaments } from "@/components/sections/tournaments"
 import { Reviews } from "@/components/sections/reviews"
 import { Stats } from "@/components/sections/stats"
@@ -13,13 +12,12 @@ import { Footer } from "@/components/layout/footer"
 export default function Home() {
   return (
     <>
-      <Navbar transparent />
+      <Navbar />
       <main id="main-content">
         <Hero />
-        <About />
         <Facilities />
         <Services />
-        <Gallery />
+        <About />
         <Tournaments />
         <Reviews />
         <Stats />
