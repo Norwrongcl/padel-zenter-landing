@@ -1,7 +1,7 @@
 import { type HTMLAttributes, forwardRef } from "react"
 import { cn } from "@/lib/utils"
 
-type SectionVariant = "default" | "dark" | "primary" | "glass"
+type SectionVariant = "default" | "dark" | "primary" | "glass" | "gradient" | "dots"
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
   variant?: SectionVariant
@@ -13,6 +13,8 @@ const variantClasses: Record<SectionVariant, string> = {
   dark: "bg-foreground text-white",
   primary: "bg-primary text-white",
   glass: "bg-white/50 backdrop-blur-sm",
+  gradient: "bg-gradient-to-br from-primary via-primary to-primary-hover text-white",
+  dots: "bg-dots bg-background",
 }
 
 const Section = forwardRef<HTMLElement, SectionProps>(
